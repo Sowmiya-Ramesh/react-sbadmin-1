@@ -1,2 +1,2 @@
-# react-sbadmin-1
+# sb-admin-1
 Created with CodeSandbox
