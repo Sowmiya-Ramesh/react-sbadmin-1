@@ -20,14 +20,14 @@ export default function ColorCards() {
     <>
       {color.map((data) => {
         return (
-          <div class="col-lg-3 mb-4">
+          <div className="col-lg-3 mb-4">
             <div
-              class="card text-white shadow"
+              className="card text-white shadow"
               style={{ backgroundColor: data.code }}
             >
-              <div class="card-body text-white">
+              <div className="card-body text-white">
                 {data.color}
-                <div class="text-white-50 small">{data.code}</div>
+                <div className="text-white-50 small">{data.code}</div>
               </div>
             </div>
           </div>

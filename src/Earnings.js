@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
 
 export default function Earnings() {
-  const [project, setProject] = useState([]);
+  const [earnings, setEarnings] = useState([]);
 
-  function getProject() {
+  function getEarnings() {
     fetch("https://60fcdb7a1fa9e90017c70cd7.mockapi.io/earnings", {
       method: "GET"
     })
       .then((data) => data.json())
-      .then((data) => setProject(data))
+      .then((data) => setEarnings(data))
       .then((data) => console.log(data))
       .catch((e) => console.log(e));
   }
   useEffect(() => {
-    getProject();
+    getEarnings();
   }, []);
 
   return (
     <div className="row">
-      {project.map((data, index) => {
+      {earnings.map((data, index) => {
         return (
           <div className="col-xl-3 col-md-6 mb-4">
             <div className={`card border-left-${data.color} shadow h-100 py-2`}>
